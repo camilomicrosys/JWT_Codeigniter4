@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "81aa794c-be89-48e3-9571-d942c76819f1",
+		"name": "jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alejandra@pruebas.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "default"
+						},
+						{
+							"key": "confirm_password",
+							"value": "password123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/jwt/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"jwt",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "alejandra@pruebas.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/jwt/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"jwt",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "correr_api_con_datos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTY2ODk5ODk1OSwiZXhwIjoxNjY4OTk4OTg5LCJlbWFpbCI6ImNhbWlsb0BwcnVlYmFzLmNvbSJ9.6R4sQodBqFyPXyMN2YKXByY-EaAQRT67W8U1vOEyUnE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/jwt/public/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"jwt",
+						"public",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prueba",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJc3N1ZXIgb2YgdGhlIEpXVCIsImF1ZCI6IkF1ZGllbmNlIHRoYXQgdGhlIEpXVCIsInN1YiI6IlN1YmplY3Qgb2YgdGhlIEpXVCIsImlhdCI6MTY3MDg5ODc5NCwiZXhwIjoxNjcwOTAyMzk0LCJlbWFpbCI6ImFsZWphbmRyYUBwcnVlYmFzLmNvbSJ9.BgVVoqspOJYKQ5XCvmvRhy0wSSffcnC5aOMFCAld-Go",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/jwt/public/api/prueba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"jwt",
+						"public",
+						"api",
+						"prueba"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
